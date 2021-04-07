@@ -1,0 +1,30 @@
+import matplotlib.pyplot as plt
+
+
+def plotter(x_vals, y_vals):
+    plt.plot(x_vals,y_vals)
+    plt.show()
+
+def get_x_vals(point_num):
+    x_vals = []
+    x_count = 0
+    while x_count < int(point_num):
+        x_vals.append(input('give me '+ str(point_num) +' x values: '))
+        x_count += 1
+    return x_vals
+def get_y_vals(point_num):
+    y_vals = []
+    y_count = 0
+    while y_count < int(point_num):
+        y_vals.append(input('give me ' + str(point_num) +' y values: '))
+        y_count += 1
+    return y_vals
+
+points = 0
+while int(points) <2:
+    points = input("Please enter the number of points for your line graph (minimum 2): ")
+
+x_vals = get_x_vals(points)
+y_vals = get_y_vals(points)
+plotter(x_vals, y_vals)
+
